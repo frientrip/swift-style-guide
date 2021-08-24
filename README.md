@@ -5,7 +5,7 @@
 더 원활한 코딩을 위한 개선은 언제든 환영이라구요!
 
 ## 목차
-- [네이밍](#네이밍)
+- [Naming](#naming)
   - [디랙토리](#디렉토리)
   - [파일명](#파일명)
   - [클래스](#클래스)
@@ -14,19 +14,19 @@
   - [상수](#상수)
   - [enum](#enum)
   - [약어](#약어)
-- [포맷팅](#포맷팅)
+- [Formatting](#formatting)
   - [최대 줄길이](#최대-줄길이)
   - [들여쓰기](#들여쓰기)
   - [띄어쓰기](#띄어쓰기)
   - [줄바꿈](#줄바꿈)
-- [클래스와 구조체](#클래스와-구조체)
-- [클로저](#클로저)
-- [뷰](#뷰)
-- [뷰컨트롤러](#뷰컨트롤러)
+- [Class and Struct](#class-and-struct)
+- [Closure](#closure)
+- [View](#view)
+- [ViewController](#viewcontroller)
 - [Reference](#reference)
 - [License](#license)
 
-## 네이밍
+## Naming
 ### 디렉토리
 - 디렉토리 이름은 대문자로 시작하는 단어로 설정합니다.
 - 해당 디렉토리에 비슷한 기능을 하는 파일들이 들어있다면 단어의 끝에 복수로 `s`를 붙여줍니다.
@@ -141,7 +141,7 @@
     var imageUrl: String
     ```
 
-## 포맷팅
+## Formatting
 ### 최대 줄길이
 - 한줄 최대 길이는 **100**자로 설정합니다.
 - XCode > Preferences > Text Editing > Display > Page guide at column에서 설정 가능합니다.
@@ -290,7 +290,7 @@
       case .tapRefresh: print("Tap refresh")
     ```
 
-## 클래스와 구조체
+## Class and Struct
 - 클래스, 구조체 지역 변수를 사용할 때, `self`를 명시적으로 사용합니다.
 - 더이상 상속이 이루어지지 않는 클래스에는 `final` 키워드를 붙입니다.
 - 프로토콜을 채택할 경우, `extension`을 사용합니다.
@@ -313,7 +313,7 @@
     ```
 
 
-## 클로저
+## Closure
 - 클로저 내의 인자에는 괄호를 사용하지 않습니다.
   - **Good👏**
     ```swift
@@ -343,7 +343,7 @@
     }
     ```
 
-## 뷰
+## View
 - UI 컴포넌트 정의 사이에는 한줄 공백을 추가합니다.
   - **Good👏**
     ```swift
@@ -368,7 +368,7 @@
   - private 함수
 - 같은 접근 제어자를 가진 함수 내에서는 사용 순서대로 선언합니다.
 
-## 뷰컨트롤러
+## ViewController
 - ViewController를 상속하는 클래스들의 변수 및 함수 선언 순서는 다음과 같습니다.
   - 상수
   - View, ViewModel 변수 정의
