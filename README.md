@@ -289,7 +289,51 @@
       case .tapHome: print("Tap home")
       case .tapRefresh: print("Tap refresh")
     ```
+- import중 System package 와 3rd party package 사이에 공백을 추가합니다.
+	- **Good👏**
+		```swift
+		import Foundation
+		import UIKIt
+		
+		import RxSwift
+		import Rxcocoa
+		```
 
+	- **Bad👎**
+		```swift
+		import Foundation
+		import UIKi
+		import RxSwift
+		import Rxcocoa
+		``` 
+
+### Switch
+- swifth 문 내부의 case에 parameter가 있을 경우 let은 **맨 앞이 아닌** 각 parameter 명 앞에 선언합니다.
+	- **Good👏**
+		```swift
+		switch error {
+			case .unknown:
+				// Do something
+				
+			case .forbidden:
+				// Do something
+				
+			case .custom(let message):
+				// Do something
+		```
+		
+	- **Bad👎**
+		```swift
+		switch error {
+			case .unknown:
+				// Do something
+				
+			case .forbidden:
+				// Do something
+				
+			case let .custom(message):
+				// Do something
+		```
 ## Class and Struct
 - 클래스, 구조체 지역 변수를 사용할 때, `self`를 명시적으로 사용합니다.
 - 더이상 상속이 이루어지지 않는 클래스에는 `final` 키워드를 붙입니다.
